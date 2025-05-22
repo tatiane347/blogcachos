@@ -1,0 +1,43 @@
+/* Estilos para o post de cortes */
+.cut-type {
+    background-color: #F8F4EF;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border-left: 4px solid #8C6A56;
+}
+
+.cut-type h4 {
+    color: #5E503F;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.cut-example {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin: 0.8rem auto;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tips-title {
+    color: #8C6A56;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.tips-box {
+    background-color: #EDE0D4;
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.tips-box ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+/* Mantenha os estilos .call-to-action e .hashtags do post anterior */

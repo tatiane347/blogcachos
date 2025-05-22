@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachos & Beleza | Tudo sobre Cabelos Cacheados</title>
+    <style>
+        /* Variáveis de cores */
+        :root {
+            --bege: #EDE0D4;
+            --preto: #000000;
+            --marrom-claro: #D5BDAF;
+            --marrom-escuro: #8C6A56;
+        }
+
+        /* Reset e estilos gerais */
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--bege);
+            color: var(--preto);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* Navegação suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Âncoras invisíveis para as seções */
+        .section-anchor {
+            display: block;
+            position: relative;
+            top: -100px;
+            visibility: hidden;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--preto);
+            color: var(--bege);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo p {
+            margin: 0.5rem 0 0;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Navegação */
+        nav {
+            margin-top: 1.5rem;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: var(--bege);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            background-color: var(--marrom-claro);
+            color: var(--preto);
+        }
+
+        /* Conteúdo principal */
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Seções */
+        section {
+            padding: 2rem 0;
+            min-height: 80vh;
+        }
+
+        /* Posts */
+        .post {
+            background-color: white;
+            margin: 2rem 0;
+            padding: 1.8rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .post h2 {
+            color: var(--marrom-escuro);
+            margin-top: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .date {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .post img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 1rem 0;
+            height: auto;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--preto);
+            color: var(--bege);
+            margin-top: 3rem;
+        }
+
+        /* Estilos específicos para conteúdo */
+        h3 {
+            color: var(--marrom-escuro);
+            margin-top: 1.8rem;
+            font-size: 1.3rem;
+        }
+
+        .ingredient-category, .cut-type {
+            background-color: #F8F4EF;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--marrom-escuro);
+        }
+
+        .routine-steps {
+            background-color: #F5EBE0;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.2rem;
+            background-color: var(--preto);
+            color: var(--bege);
+            border-radius: 8px;
+        }
+
+        .hashtags {
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Formulário de contato */
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .contact-form button {
+            background: var(--marrom-escuro);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .post {
+                padding: 1.2rem;
+            }
+            
+            section {
+                min-height: auto;
+                padding: 1rem 0;
+            }
+        }
+    </style>
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>💫 Cachos & Beleza</h1>
+            <p>Dicas e inspirações para cabelos cacheados</p>
+        </div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#rotinas">Rotinas</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Âncora para a seção Início -->
+        <div id="inicio" class="section-anchor"></div>
+        
+        <!-- Seção Início -->
+        <section>
+            <article class="post">
+                <h2>Bem-vinda ao Universo dos Cachos!</h2>
+                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Diversos tipos de cabelos cacheados">
+                
+                <div class="post-content">
+                    <p>Seu cabelo cacheado é único e merece cuidados especiais. Aqui você encontrará tudo o que precisa para transformar seus fios:</p>
+                    
+                    <div class="ingredient-category">
+                        <h3>O que você vai descobrir:</h3>
+                        <ul>
+                            <li>Rotinas personalizadas para seu tipo de cacho</li>
+                            <li>Produtos naturais que realmente funcionam</li>
+                            <li>Cortes que valorizam seus cachos</li>
+                            <li>Dicas de especialistas em cabelos cacheados</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="call-to-action">
+                        <p>Comece sua jornada capilar agora mesmo!</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <!-- Âncora para a seção Rotinas -->
+        <div id="rotinas" class="section-anchor"></div>
+        
+        <!-- Seção Rotinas -->
+        <section>
+            <article class="post">
+                <h2>Cachos Perfeitos e Naturais: O Segredo da Hidratação e Definição! ✨</h2>
+                <span class="date">Postado em: 22/05/2024</span>
+                
+                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mulher com cachos hidratados sorrindo">
+                
+                <div class="post-content">
+                    <p>Quer cachos de dar inveja, cheios de vida, hidratados e super definidos, usando o poder da natureza? Chega de químicas e produtos pesados! A chave está em nutrir seus fios com ingredientes que a mãe natureza nos oferece.</p>
+                    
+                    <h3>Por que a hidratação natural é essencial para seus cachos?</h3>
+                    <p>Cabelos cacheados tendem a ser naturalmente mais secos, pois a oleosidade do couro cabeludo tem dificuldade em percorrer a espiral do fio até as pontas. A hidratação é o pilar para combater o ressecamento, prevenir o frizz e garantir a elasticidade e o brilho que seus cachos merecem.</p>
+                    
+                    <h3>Descubra produtos e ingredientes naturais que vão transformar seus cachos:</h3>
+                    
+                    <div class="ingredient-category">
+                        <h4>Óleos Vegetais Puros:</h4>
+                        <ul>
+                            <li><strong>Óleo de Coco:</strong> Um clássico poderoso! Penetra profundamente no fio, nutrindo e protegendo contra danos. Ideal para umectação.</li>
+                            <li><strong>Óleo de Rícino:</strong> Estimula o crescimento, fortalece os fios e ajuda na densidade.</li>
+                            <li><strong>Azeite de Oliva Extra Virgem:</strong> Rico em vitaminas e antioxidantes, proporciona brilho e maciez.</li>
+                            <li><strong>Óleo de Abacate:</strong> Excelente para cabelos muito secos, com alto poder nutritivo.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ingredient-category">
+                        <h4>Manteigas Naturais:</h4>
+                        <ul>
+                            <li><strong>Manteiga de Karité:</strong> Super hidratante e emoliente, sela a umidade nos fios.</li>
+                            <li><strong>Manteiga de Cacau:</strong> Ótima para pontas duplas e ressecamento extremo.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Rotina de Cuidados para Cachos Hidratados e Definidos:</h3>
+                    <ol class="routine-steps">
+                        <li><strong>Pré-poo com Óleo:</strong> Antes de lavar, aplique um óleo vegetal puro do comprimento às pontas. Deixe agir por 30 minutos ou durante a noite.</li>
+                        <li><strong>Lave com Delicadeza:</strong> Use um shampoo suave, sem sulfato, e massageie o couro cabeludo. Evite esfregar os fios.</li>
+                        <li><strong>Hidratação Profunda:</strong> Após o shampoo, aplique uma máscara de hidratação natural ou uma mistura caseira (ex: abacate e mel).</li>
+                    </ol>
+                    
+                    <div class="call-to-action">
+                        <p>Qual seu produto natural favorito para cachos? <a href="#comentarios" style="color:#EDE0D4; text-decoration:underline;">Compartilhe nos comentários!</a></p>
+                        <div class="hashtags">
+                            #CachosNaturais #CabeloCacheado #HidrataçãoCapilar #BelezaNatural
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <!-- Âncora para a seção Produtos -->
+        <div id="produtos" class="section-anchor"></div>
+        
+        <!-- Seção Produtos -->
+        <section>
+            <article class="post">
+                <h2>Volume e Estilo: Conheça os Cortes que Realçam a Beleza dos Seus Cachos! ✂️✨</h2>
+                <span class="date">Postado em: 25/05/2024</span>
+                
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mulher com corte em camadas destacando cachos volumosos">
+                
+                <div class="post-content">
+                    <p>Cabelos cacheados são pura personalidade e movimento! Mas para que seus cachos atinjam seu potencial máximo de volume e definição, o corte certo faz toda a diferença. Longe da ideia de "domar" os cachos, o objetivo é valorizá-los e permitir que expressem sua forma natural.</p>
+                    
+                    <h3>Os melhores cortes para volume e estilo:</h3>
+                    
+                    <div class="cut-type">
+                        <h4>1. Corte em Camadas (Longas ou Curtas)</h4>
+                        <ul>
+                            <li><strong>Por que funciona:</strong> Remove peso excessivo, evitando o "efeito topo achatado" e distribuindo o volume.</li>
+                            <li><strong>Dica:</strong> Camadas longas mantêm comprimento; camadas curtas no topo criam volume arredondado.</li>
+                        </ul>
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Corte em camadas para cachos" class="cut-example">
+                    </div>
+                    
+                    <div class="cut-type">
+                        <h4>2. Corte em U ou V</h4>
+                        <ul>
+                            <li><strong>Por que funciona:</strong> Formato suave nas costas que evita pontas pesadas e dá movimento.</li>
+                            <li><strong>Dica:</strong> Ideal para quem quer manter comprimento sem perder leveza.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cut-type">
+                        <h4>3. Corte Redondo (Round Cut)</h4>
+                        <ul>
+                            <li><strong>Por que funciona:</strong> Silhueta arredondada que valoriza o volume natural.</li>
+                            <li><strong>Dica:</strong> Funciona do curto ao longo!</li>
+                        </ul>
+                        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Corte redondo para cachos" class="cut-example">
+                    </div>
+                    
+                    <h3 class="tips-title">✂️ Dicas Essenciais para o Corte Perfeito:</h3>
+                    <div class="tips-box">
+                        <ul>
+                            <li><strong>Corte a seco:</strong> Permite visualizar a forma natural dos cachos.</li>
+                            <li><strong>Procure especialistas em cachos:</strong> Eles entendem de curvatura e densidade.</li>
+                            <li><strong>Comunicação:</strong> Leve fotos de referência!</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="call-to-action">
+                        <p>Qual desses cortes combinaria com seus cachos? <a href="#comentarios" style="color:#EDE0D4; text-decoration:underline;">Conte nos comentários!</a></p>
+                        <div class="hashtags">
+                            #CorteParaCachos #VolumeCapilar #BelezaCacheada #CabeloNatural
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <!-- Âncora para a seção Contato -->
+        <div id="contato" class="section-anchor"></div>
+        
+        <!-- Seção Contato -->
+        <section>
+            <div class="contact-form">
+                <h2>Fale Conosco</h2>
+                <p>Tem dúvidas ou sugestões? Envie sua mensagem!</p>
+                
+                <form>
+                    <input type="text" placeholder="Seu nome" required>
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+                
+                <div class="call-to-action" style="margin-top: 2rem;">
+                    <p>Nos siga nas redes sociais para mais dicas!</p>
+                    <div class="hashtags">
+                        #CachosEBeleza #ComunidadeCacheada
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Cachos & Beleza | Feito com amor para cuidar dos seus cachos.</p>
+    </footer>
+</body>
+</html>
